@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GS Rise Research — Symposium Showcase</title>
+  <meta name="description" content="GS Rise Research — visuals, summaries, and resources for our symposium showcase." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Cpath d='M16 72 L50 16 L84 72 Z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <!-- Tailwind via CDN for speed/zero-build; swap to local build later if needed -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small, tasteful micro-interactions */
+    .card:hover{transform:translateY(-2px)}
+    .fade-in{animation:fade .6s ease-in-out both}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 antialiased [--brand:#4f46e5]">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-zinc-200">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg bg-[var(--brand)]"></div>
+        <span class="font-semibold tracking-tight">GS Rise Research</span>
+      </div>
+      <nav class="ml-auto text-sm text-zinc-600 flex gap-4">
+        <a href="#about" class="hover:text-zinc-900">About</a>
+        <a href="#highlights" class="hover:text-zinc-900">Highlights</a>
+        <a href="#gallery" class="hover:text-zinc-900">Gallery</a>
+        <a href="#resources" class="hover:text-zinc-900">Resources</a>
+        <a href="#qr" class="hover:text-zinc-900">QR</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-white to-zinc-50">
+    <div class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Symposium Showcase</h1>
+        <p class="mt-4 text-zinc-700 max-w-prose">A lightweight, ready-to-deploy site for our poster, demos, and visuals. Share this link or the QR code below at the booth; visitors can browse highlights and download materials instantly.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#gallery" class="inline-flex items-center justify-center rounded-xl bg-[var(--brand)] px-4 py-2 text-white text-sm font-semibold shadow-sm">View Gallery</a>
+          <a href="#resources" class="inline-flex items-center justify-center rounded-xl border px-4 py-2 text-sm font-semibold">Download Poster</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square w-full max-w-xs mx-auto rounded-2xl border bg-white p-4 shadow-sm fade-in" id="qrCard">
+          <div class="text-center text-xs text-zinc-500 mb-2">Scan me</div>
+          <div id="qrcode" class="mx-auto flex items-center justify-center"></div>
+          <div class="mt-3 text-center text-xs text-zinc-500">Opens: <span id="qrTarget" class="font-medium break-all"></span></div>
+          <div class="mt-3 flex justify-center gap-2">
+            <button id="downloadPng" class="text-xs underline">Download PNG</button>
+            <button id="printBtn" class="text-xs underline">Print</button>
+          </div>
+        </div>
+        <p class="mt-3 text-center text-xs text-zinc-500">Tip: After deployment, this QR updates <em>automatically</em> to your live URL.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="border-t border-zinc-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-3 gap-8">
+      <div class="md:col-span-1">
+        <h2 class="text-xl font-bold">About the Project</h2>
+      </div>
+      <div class="md:col-span-2 space-y-4 text-zinc-700">
+        <p><strong>Elevator pitch:</strong> Replace this text with a one-paragraph summary of the research goal, dataset(s), and methods. Keep it non-jargony for symposium visitors.</p>
+        <ul class="list-disc pl-5">
+          <li>Problem: concise statement of the research problem.</li>
+          <li>Approach: 2–3 core techniques/algorithms.</li>
+          <li>Impact: why it matters, who benefits.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights" class="border-t border-zinc-200 bg-zinc-50">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-xl font-bold">Key Highlights</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
+          <h3 class="font-semibold">Result A</h3>
+          <p class="mt-2 text-sm text-zinc-600">Short takeaway with a practical metric (e.g., “+12% F1 vs. baseline”).</p>
+        </article>
+        <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
+          <h3 class="font-semibold">Result B</h3>
+          <p class="mt-2 text-sm text-zinc-600">One-liner that maps to a figure in the gallery.</p>
+        </article>
+        <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
+          <h3 class="font-semibold">Open Data/Code</h3>
+          <p class="mt-2 text-sm text-zinc-600">If applicable, link to a repo or dataset (can be added later).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="border-t border-zinc-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-xl font-bold">Visual Gallery</h2>
+        <div class="text-xs text-zinc-500">Drop PNG/JPG/SVG into <code>/assets/gallery/</code> and update the list below.</div>
+      </div>
+
+      <div id="galleryGrid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+      <!-- Example: configure your images here -->
+      <script>
+        const galleryImages = [
+          // Replace placeholders with your files in /assets/gallery
+          { src: 'assets/gallery/sample-1.jpg', alt: 'Sample Figure 1', caption: 'Baseline vs. Proposed' },
+          { src: 'assets/gallery/sample-2.jpg', alt: 'Sample Figure 2', caption: 'Ablation study' },
+          { src: 'assets/gallery/sample-3.jpg', alt: 'Sample Figure 3', caption: 'Pipeline overview' },
+        ];
+      </script>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources" class="border-t border-zinc-200 bg-zinc-50">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-xl font-bold">Resources</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a class="card block rounded-2xl border bg-white p-5 shadow-sm" href="assets/poster.pdf" target="_blank" rel="noopener">
+          <div class="text-sm font-semibold">Poster (PDF)</div>
+          <div class="mt-1 text-xs text-zinc-600">High-res PDF for printing and download.</div>
+        </a>
+        <a class="card block rounded-2xl border bg-white p-5 shadow-sm" href="assets/one-pager.pdf" target="_blank" rel="noopener">
+          <div class="text-sm font-semibold">One-pager</div>
+          <div class="mt-1 text-xs text-zinc-600">Quick summary handout.</div>
+        </a>
+        <a class="card block rounded-2xl border bg-white p-5 shadow-sm" href="#" id="emailLink">
+          <div class="text-sm font-semibold">Contact Us</div>
+          <div class="mt-1 text-xs text-zinc-600">Email the research team.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-zinc-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-xs text-zinc-500 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+      <div>© <span id="year"></span> GS Rise Research</div>
+      <div class="flex gap-3">
+        <a href="#about" class="underline">About</a>
+        <a href="#resources" class="underline">Resources</a>
+        <a href="#qr" class="underline">QR</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QRCode library (client-side; no backend needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-M6LwV7R3QvZg9C+u3p2k1T1v7n+8j0y3cH9u0QWnQv6t9u3s8z1G3g0Qh3bWI7q1v4pD3d3cZ9v8bU2hJrN2wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    // ---------- Basic runtime config you can tweak without build tools ----------
+    const CONFIG = {
+      // Update this after deployment to ensure the QR points to your live site.
+      // During local preview, this will fall back to window.location.href
+      DEPLOYED_URL: '',
+      CONTACT_EMAIL: 'research@example.edu',
+    };
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact link
+    const emailLink = document.getElementById('emailLink');
+    emailLink.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=Symposium%20Inquiry`;
+
+    // Determine QR target
+    const qrTarget = CONFIG.DEPLOYED_URL && CONFIG.DEPLOYED_URL.trim().length > 0
+      ? CONFIG.DEPLOYED_URL.trim()
+      : window.location.href.split('#')[0];
+    document.getElementById('qrTarget').textContent = qrTarget;
+
+    // Render QR code
+    const qrContainer = document.getElementById('qrcode');
+    const qr = new QRCode(qrContainer, {
+      text: qrTarget,
+      width: 220, height: 220,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H,
+    });
+
+    // Download QR as PNG
+    document.getElementById('downloadPng').addEventListener('click', () => {
+      // The library renders a <img> inside the container — extract its data URL
+      const img = qrContainer.querySelector('img');
+      if (!img) return;
+      const a = document.createElement('a');
+      a.href = img.src;
+      a.download = 'gs-rise-qr.png';
+      a.click();
+    });
+
+    // Print QR card
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Build gallery grid
+    const grid = document.getElementById('galleryGrid');
+    function cardTemplate(item){
+      return `
+        <figure class="card rounded-2xl border bg-white overflow-hidden shadow-sm">
+          <img src="${item.src}" alt="${item.alt || ''}" class="w-full h-48 object-cover bg-zinc-100" loading="lazy" />
+          <figcaption class="p-3 text-sm text-zinc-700">${item.caption || ''}</figcaption>
+        </figure>
+      `;
+    }
+    grid.innerHTML = galleryImages.map(cardTemplate).join('');
+
+    // Hash-based jump to QR from printed material if needed
+    if (location.hash === '#qr') {
+      document.getElementById('qrCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+  <!--
+  =========================
+  QUICK DEPLOY INSTRUCTIONS
+  =========================
+  Option A — GitHub Pages (free):
+    1) Create a new repo, add this file plus /assets folder (poster.pdf, images).
+    2) Settings → Pages → Deploy from branch → main → root.
+    3) After it goes live, edit CONFIG.DEPLOYED_URL above to your public URL and commit.
+
+  Option B — Netlify/Vercel (free tiers):
+    1) Import repo, set framework = none/static site, build command = none, publish directory = root.
+    2) After deploy, update CONFIG.DEPLOYED_URL and redeploy.
+
+  Adding your content:
+    - Put images in /assets/gallery/ and update the galleryImages array.
+    - Replace assets/poster.pdf and assets/one-pager.pdf with your files.
+    - Update CONTACT_EMAIL above.
+
+  Accessibility/UX notes:
+    - Alt text provided in gallery config; keep it meaningful.
+    - Large tap targets, high color contrast, semantic sections.
+
+  Custom domain and QR:
+    - If you later add a custom domain, update CONFIG.DEPLOYED_URL so the QR always points to the canonical URL.
+  -->
+</body>
+</html>
