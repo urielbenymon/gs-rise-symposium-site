@@ -70,9 +70,10 @@
         <h2 class="text-xl font-bold">About the Project</h2>
       </div>
       <div class="md:col-span-2 space-y-4 text-zinc-700">
-        <p><strong>Elevator pitch:</strong> Replace this text with a one-paragraph summary of the research goal, dataset(s), and methods. Keep it non-jargony for symposium visitors.</p>
+        <p><strong>Elevator pitch:</strong> This website builds on our original research evaluating B-Tree performance under concurrency in PostgreSQL. The baseline experiments measured how a modified B-Tree structure improved insertion throughput across increasing client loads. Extending that work, a regression-based machine learning model was trained to forecast performance beyond tested limits—projecting system behavior at up to 2,000 concurrent clients. The standard and predictive results show how AI-driven modeling can move performance analysis from observation to foresight, going past limitations, and giving database systems a way to anticipate scaling limits and optimize future index performance.</p>
         <ul class="list-disc pl-5">
-          <li>Problem: concise statement of the research problem.</li>
+          <li>Problem: Standard B-Trees begin to plateau in throughput as concurrency rises, limiting insertion efficiency at scale.
+                There is a need to understand and forecast how modified index structures behave under extreme client loads.</li>
           <li>Approach: 2–3 core techniques/algorithms.</li>
           <li>Impact: why it matters, who benefits.</li>
         </ul>
