@@ -87,15 +87,15 @@
       <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
           <h3 class="font-semibold">Result A (Image 1)</h3>
-          <p class="mt-2 text-sm text-zinc-600">This is the original, base data from the standard vs modified B-Tree with a cap of 64 clients. PostgreSQL caps at 64 simulated clients. The data shows a 22.5x gap favoring the modified B-Tree's throughputs per second (TPS), which is the amount of insertions performed per second. At 64 clients the gap is 7.5x for the modified btree</p>
+          <p class="mt-2 text-sm text-zinc-600">This is the original, base data from the standard vs modified B-Tree with a cap of 64 clients. PostgreSQL caps at 64 simulated clients. The data shows a 22.5x gap favoring the modified B-Tree's throughputs per second (TPS), which is the amount of insertions performed per second. At 64 clients the gap is 7.5x for the modified btree.</p>
         </article>
         <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
-          <h3 class="font-semibold">Result B</h3>
-          <p class="mt-2 text-sm text-zinc-600">One-liner that maps to a figure in the gallery.</p>
+          <h3 class="font-semibold">Result B (Image 2 - 1024 Client Limit)</h3>
+          <p class="mt-2 text-sm text-zinc-600">This is the result of the original data collected trained on machine learning regression model for predictions past 64 clients for a cap of 1024 clients. The model was trained on prior collected data to forecast performance and the modified B-Tree maintains a 3-4x gap through higher client and insertion volume.</p>
         </article>
         <article class="card fade-in rounded-2xl border bg-white p-5 shadow-sm">
           <h3 class="font-semibold">Result C</h3>
-          <p class="mt-2 text-sm text-zinc-600">Results explained for the 3rd image.</p>
+          <p class="mt-2 text-sm text-zinc-600">Simmilarly to Result B, this shows a forecasted cap of 2000 clients. The model forecasted e consistent 3-4x gap in favor of the modified B-tree for the modified B-Tree as client and insertion volume grow over time.</p>
         </article>
       </div>
     </div>
