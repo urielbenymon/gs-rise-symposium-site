@@ -74,8 +74,16 @@
         <ul class="list-disc pl-5">
           <li>Problem: Standard B-Trees begin to plateau in throughput as concurrency rises, limiting insertion efficiency at scale.
                 There is a need to understand and forecast how modified index structures behave under extreme client loads.</li>
-          <li>Approach: 2–3 core techniques/algorithms.</li>
-          <li>Impact: why it matters, who benefits.</li>
+          <li>Approach: Benchmarked stock and modified B-Trees in PostgreSQL using increasing client concurrency.
+
+                       Applied machine learning regression (degree-2 polynomial fit) to predict throughput scaling trends beyond measured data.
+
+                       Combined standard and predictive data for comparative analysis between baseline and AI-forecasted models.</li>
+          <li>Impact: Demonstrates how predictive modeling can guide future database tuning and index design.
+
+                 Provides measurable insight into how structural modifications affect performance under real-world workloads.
+
+                 Bridges performance benchmarking and AI forecasting, offering a practical framework for scalable system optimization..</li>
         </ul>
       </div>
     </div>
