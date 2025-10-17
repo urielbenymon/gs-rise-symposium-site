@@ -109,23 +109,14 @@
 
       <!-- Example: configure your images here -->
       <script>
-        // Use the same target as the QR so paths work locally *and* on GitHub Pages subpaths.
-        const BASE = (function () {
-          const target = (CONFIG.DEPLOYED_URL && CONFIG.DEPLOYED_URL.trim()) || window.location.href.split('#')[0];
-          // ensure trailing slash, then strip filename if any
-          const u = new URL(target);
-          if (!u.pathname.endsWith('/')) u.pathname = u.pathname.replace(/[^/]*$/, '/');
-          return u.origin + u.pathname; // e.g. https://urielbenymon.github.io/gs-rise-symposium-site/
-        })();
-      
         const galleryImages = [
           {
-            src: BASE + 'assets/chart-1.png',
+            src: './assets/chart-1.png',
             alt: 'AI forecast: Stock vs Modified B-tree up to 1,024 clients',
             caption: 'AI regression prediction: Insert throughput vs concurrency (up to 1,024 clients).'
           },
           {
-            src: BASE + 'assets/chart-2.png',
+            src: './assets/charts-2.png',
             alt: 'AI forecast: Stock vs Modified B-tree up to 2,000 clients',
             caption: 'AI regression prediction: Insert throughput vs concurrency (up to 2,000 clients).'
           }
