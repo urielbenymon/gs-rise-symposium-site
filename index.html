@@ -170,9 +170,12 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Contact link
+    // Contact link (only if element exists)
     const emailLink = document.getElementById('emailLink');
-    emailLink.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=Symposium%20Inquiry`;
+    if (emailLink) {
+      emailLink.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=Symposium%20Inquiry`;
+    }
+
 
     // Determine QR target
     const qrTarget = CONFIG.DEPLOYED_URL && CONFIG.DEPLOYED_URL.trim().length > 0
